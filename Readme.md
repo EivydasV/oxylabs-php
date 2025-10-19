@@ -1,7 +1,10 @@
 # oxylabs php
 
+## Framework
+Symfony
+
 ## Before you start
-1. Make sure you have `Docker` installed
+1. Make sure you have `Docker` installed.
 2. Make sure you have `make` installed. 
 You can install `make` with `sudo apt-get -y install make`.
 Otherwise, you can run the commands from the `Makefile` manually.
@@ -12,10 +15,10 @@ If they don't match, change them in the `Dockerfile` accordingly.
 
 
 ## First time setup
-1. `cp .env.example .env`
-2. Run `make first-time-setup`
-3. Run `make seed-db`
-4. That's it! You can now access the application at `http://localhost:8000`
+1. `cp .env.example .env`.
+2. Run `make first-time-setup`.
+3. Run `make seed-db`.
+4. That's it! You can now access the application at `http://localhost:8000`.
 
 ## Available commands
 Check `Makefile` for available commands.
