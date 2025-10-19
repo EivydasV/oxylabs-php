@@ -10,7 +10,7 @@ use App\enum\DevicePlatform;
 use App\Repository\DeviceRepository;
 use DateTimeImmutable;
 
-class NoAndroidForSpanishUserRule implements NotificationInterface
+class NoAndroidForSpanishNotificationRule implements NotificationInterface
 {
     private const SUPPORTED_COUNTRY = 'ES';
 
