@@ -16,3 +16,9 @@ If they don't match, change them in the `Dockerfile` accordingly.
 2. Run `make first-time-setup`
 3. Run `make seed-db`
 4. That's it! You can now access the application at `http://localhost:8000`
+
+## Available commands
+Check `Makefile` for available commands.
+
+## API
+Project has only one API endpoint available at `http://localhost:8000/api/notifications?user_id=2`.

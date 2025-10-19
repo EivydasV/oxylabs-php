@@ -20,9 +20,9 @@ exec-php:
 	docker compose exec app sh
 
 connect-to-db:
-	docker compose exec database mysql -u ${DATABASE_USER} -p${DATABASE_PASSWORD} ${MYSQL_DATABASE}
+	docker compose exec database mysql -u ${DATABASE_USER} -p${DATABASE_PASSWORD} ${DATABASE_NAME}
 
 seed-db:
 	docker compose cp ./database/seed/dump.sql database:/tmp/dump.sql
-	docker compose exec database sh -c "mysql -u root -p\$$MYSQL_ROOT_PASSWORD \$$MYSQL_DATABASE < /tmp/dump.sql"
+	docker compose exec database sh -c "mysql -u ${DATABASE_USER} -p${DATABASE_PASSWORD} ${DATABASE_NAME} < /tmp/dump.sql"
 
