@@ -19,6 +19,9 @@ down-volumes:
 exec-php:
 	docker compose exec app sh
 
+exec-db:
+	docker compose exec database sh
+
 connect-to-db:
 	docker compose exec database mysql -u ${DATABASE_USER} -p${DATABASE_PASSWORD} ${DATABASE_NAME}
 

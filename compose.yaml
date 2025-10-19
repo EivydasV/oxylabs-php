@@ -5,7 +5,8 @@ services:
     volumes:
       - ./:/var/www
     depends_on:
-      - database
+       database:
+          condition: service_healthy
 
   webserver:
     image: nginx:1.17.1-alpine
@@ -28,6 +29,11 @@ services:
       - "3306:3306"
     volumes:
       - db_data:/var/lib/mysql
+    healthcheck:
+      test: [ "CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "${DATABASE_USER}", "-p${DATABASE_PASSWORD}" ]
+      interval: 5s
+      timeout: 5s
+      retries: 20
 
 volumes:
   db_data:
