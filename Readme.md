@@ -15,7 +15,7 @@ If they don't match, change them in the `Dockerfile` accordingly.
 
 
 ## First time setup
-1. `cp .env.example .env`.
+1. Run `cp .env.example .env`.
 2. Run `make first-time-setup`.
 3. Run `make seed-db`.
 4. That's it! You can now access the application at `http://localhost:8000`.
